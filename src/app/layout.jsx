@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
             {/* Logo in Mono font */}
             <Link href="/" className="font-mono font-bold text-lg tracking-tight hover:text-brand-primary transition-colors">
-              &lt;Fabian /&gt;
+              Fabian Godoy
             </Link>
             
             {/* Navigation Links */}
@@ -59,8 +59,8 @@ export default function RootLayout({ children }) {
           <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p>© {new Date().getFullYear()} — Built with Next.js</p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-brand-primary transition-colors">GitHub</a>
-              <a href="#" className="hover:text-brand-primary transition-colors">LinkedIn</a>
+              <a href="https://github.com/Fabiang16" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary transition-colors">GitHub</a>
+              <a href="https://linkedin.com/in/fabian-godoy-morales-a9b6ba2a0" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary transition-colors">LinkedIn</a>
             </div>
           </div>
         </footer>
