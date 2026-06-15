@@ -1,10 +1,12 @@
 export const metadata = {
   title: 'Portfolio - About',
-  description: 'The about page of my portfolio.',
+  description: 'Learn more about my background and experience.',
 }
 
 export default function About() {
   return (
-    <div>About</div>
+    <div>
+      About Godoy
+    </div>
   );
 }
