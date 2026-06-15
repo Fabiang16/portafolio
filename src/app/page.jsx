@@ -66,7 +66,7 @@ export default function Home() {
         {/* Profile Picture / Avatar */}
         <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-full overflow-hidden border-2 border-brand-card/50 shadow-sm">
           <Image 
-            src="/Picture.jpg" 
+            src="/Picture2.jpg" 
             alt="Fabian Godoy" 
             fill
             className="object-cover"
