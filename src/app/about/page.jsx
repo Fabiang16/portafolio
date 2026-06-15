@@ -5,14 +5,14 @@ export const metadata = {
   description: 'Learn more about my background, journey, and technical skills.',
 };
 
-// Componente reutilizable para los enlaces sociales
+// Componente reutilizable para los enlaces sociales (ahora usa tus colores brand)
 function SocialLink({ icon, href, children }) {
   return (
     <Link 
       href={href} 
-      className="group flex items-center gap-4 text-sm font-medium text-zinc-800 transition hover:text-cyan-500 dark:text-zinc-200 dark:hover:text-cyan-400"
+      className="group flex items-center gap-4 text-sm font-medium text-brand-muted transition hover:text-brand-primary"
     >
-      <span className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-cyan-500">
+      <span className="h-6 w-6 flex-none fill-brand-muted transition group-hover:fill-brand-primary">
         {icon}
       </span>
       {children}
@@ -28,9 +28,9 @@ export default function About() {
       <div className="order-1 lg:order-2 lg:col-span-5 lg:col-start-8 flex flex-col gap-10">
         
         {/* Contenedor de la Imagen */}
-        <div className="aspect-[4/5] w-full bg-zinc-100 dark:bg-zinc-800 rounded-3xl border border-zinc-200 dark:border-zinc-700/40 flex items-center justify-center overflow-hidden shadow-sm">
+        <div className="aspect-[4/5] w-full bg-brand-card rounded-3xl border border-brand-card/50 flex items-center justify-center overflow-hidden shadow-sm">
           {/* Aquí irá tu etiqueta <Image> de Next.js cuando tengas tu foto */}
-          <span className="text-zinc-400 dark:text-zinc-500 text-sm font-mono">
+          <span className="text-brand-muted text-sm font-mono">
             [ Tu foto irá aquí ]
           </span>
         </div>
@@ -55,7 +55,7 @@ export default function About() {
             Follow me on LinkedIn
           </SocialLink>
 
-          <div className="border-t border-zinc-200 dark:border-zinc-700/40 my-2 w-full"></div>
+          <div className="border-t border-brand-card/50 my-2 w-full"></div>
 
           <SocialLink href="mailto:your.email@example.com" icon={
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" clipRule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM20.25 6.75V17.25H3.75V6.75H20.25ZM18.5982 7.72851L12 12.2359L5.40182 7.72851L4.54297 8.9859L12 14.0776L19.457 8.9859L18.5982 7.72851Z" /></svg>
@@ -70,19 +70,19 @@ export default function About() {
         
         {/* Título Principal e Introducción */}
         <div className="flex flex-col gap-6">
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 leading-tight">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-brand-text leading-tight">
             About Me
           </h1>
-          <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          <p className="text-lg text-brand-muted leading-relaxed">
             I’m a Software Engineering student with experience in project management, workflow automation, and dashboard creation. I enjoy building clean, user‑focused solutions and collaborating with teams to bring clarity and structure to technical projects.
           </p>
         </div>
         
         {/* Secciones de Contenido */}
-        <div className="flex flex-col gap-8 text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+        <div className="flex flex-col gap-8 text-base text-brand-muted leading-relaxed">
           
           <section className="flex flex-col gap-3">
-            <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-xl font-semibold text-brand-text">
               My Journey
             </h2>
             <p>
@@ -91,7 +91,7 @@ export default function About() {
           </section>
 
           <section className="flex flex-col gap-3">
-            <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-xl font-semibold text-brand-text">
               What I Enjoy Building
             </h2>
             <p>
@@ -100,7 +100,7 @@ export default function About() {
           </section>
 
           <section className="flex flex-col gap-3">
-            <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-xl font-semibold text-brand-text">
               Beyond Tech
             </h2>
             <p>
