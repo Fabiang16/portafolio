@@ -12,12 +12,12 @@ function WorkItem({ logoSrc, company, title, date }) {
   return (
     <div className="flex gap-4 items-center">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-brand-dark/5 ring-1 ring-brand-card border border-brand-card/50 bg-brand-dark overflow-hidden">
-        {/* Using Next.js Image component to load the original icons */}
+        {/* Next.js Image filling the entire circular container */}
         <Image 
           src={logoSrc} 
           alt={`${company} logo`} 
           fill
-          className="object-contain p-2" 
+          className="object-cover" 
         />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
@@ -35,13 +35,13 @@ function WorkItem({ logoSrc, company, title, date }) {
 function SkillItem({ name, iconSrc, progress }) {
   return (
     <div className="flex gap-4 items-center">
-      <div className="relative flex h-8 w-8 flex-none items-center justify-center overflow-hidden">
-        {/* Using Next.js Image component to load the original icons */}
+      <div className="relative flex h-8 w-8 flex-none items-center justify-center rounded-full overflow-hidden">
+        {/* Next.js Image filling the entire circular container */}
         <Image 
           src={iconSrc} 
           alt={`${name} icon`} 
           fill
-          className="object-contain" 
+          className="object-cover" 
         />
       </div>
       <div className="flex flex-col w-full gap-1">
