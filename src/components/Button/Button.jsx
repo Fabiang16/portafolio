@@ -46,7 +46,7 @@ export const Button = (
 };
 
 Button.defaultProps = {
-  color: "black",
+  color: "Blue",
   size: "lg",
   href: undefined,
   disabled: undefined,
