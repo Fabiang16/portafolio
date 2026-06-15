@@ -1,38 +1,34 @@
 import React from "react";
-
-// import styles
 import styles from "./Button.module.css";
-
-// import dependencies
-import {clsx} from "clsx";
+import { clsx } from "clsx";
 import Link from "next/link";
 
-export const Button = (
-  {
-    href,
-    color,
-    disabled,
-    handleClick,
-    children,
-    customClasses,
-    ...props
-  }) => {
+export const Button = ({
+  href,
+  variant = "primary", // primary, secondary, o outline
+  disabled,
+  handleClick,
+  children,
+  customClasses,
+  ...props
+}) => {
   const classes = clsx(
-    styles.button,
+    styles.button, // Clase base obligatoria
     {
-      // colors
-      [styles.buttonBlack]: color === "black",
-      [styles.buttonWhite]: color === "white",
-      // disabled
-      [styles.buttonDisabled]: disabled,
+      // Variantes dinámicas según el prop 'variant'
+      [styles.primary]: variant === "primary",
+      [styles.secondary]: variant === "secondary",
+      [styles.outline]: variant === "outline",
+      
+      // Estado deshabilitado
+      [styles.disabled]: disabled,
     },
-    // custom classes
     customClasses
   );
 
   if (href) {
     return (
-      <Link href={disabled ? '' : href} onClick={handleClick} className={classes} {...props}>
+      <Link href={disabled ? '#' : href} onClick={handleClick} className={classes} {...props}>
         {children}
       </Link>
     );
@@ -43,14 +39,4 @@ export const Button = (
       {children}
     </button>
   );
-};
-
-Button.defaultProps = {
-  color: "Black",
-  size: "lg",
-  href: undefined,
-  disabled: undefined,
-  customClasses: undefined,
-  handleClick: undefined,
-  children: undefined,
 };
