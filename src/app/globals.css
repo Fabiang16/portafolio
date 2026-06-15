@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* LIGHT MODE VARIABLES (Default) */
+  :root {
+    --bg-main: #FAFAFA;
+    --text-main: #18181B; 
+    --text-muted: #52525B;
+    --border-color: #E4E4E7;
+    --card-bg: #FFFFFF;
+    
+    /* Your chosen base color */
+    --primary-color: #667789; 
+  }
+
+  /* DARK MODE VARIABLES */
+  .dark {
+    --bg-main: #18181B;
+    --text-main: #F4F4F5;
+    --text-muted: #A1A1AA;
+    --border-color: #27272A;
+    --card-bg: #1F1F22;
+    
+    /* A slightly lighter version of #667789 for better contrast on dark backgrounds */
+    --primary-color: #8CA0B3; 
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}

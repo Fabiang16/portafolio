@@ -5,6 +5,7 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class', // Enables dark mode toggling via a CSS class
   theme: {
     extend: {
       backgroundImage: {
@@ -12,17 +13,17 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      // I added our custom color palette
+      // Updated custom color palette to use dynamic CSS variables
       colors: {
         brand: {
-          dark: '#0f172a',    // Main fund
-          card: '#1e293b',    //  Background for project cards
-          primary: '#06b6d4', // Accent color (cyan)
-          text: '#f8fafc',    // Main text
-          muted: '#cbd5e1',   // Secondary text
+          dark: 'var(--bg-main)',       // Main background
+          card: 'var(--card-bg)',       // Background for cards
+          primary: 'var(--primary-color)', // Accent color (Slate Blue)
+          text: 'var(--text-main)',     // Main text
+          muted: 'var(--text-muted)',   // Secondary text
         }
       },
-      // I added the variables from the sources
+      // Preserved your custom fonts
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
         mono: ['var(--font-fira-code)', 'monospace'],
