@@ -23,9 +23,9 @@ export default function Home() {
         Building structured solutions and <span className="text-brand-primary">seamless experiences.</span>
       </h1>
 
-      {/* Descripción corta */}
+      {/* Descripción corta (Corregida con entidades HTML) */}
       <p className="text-lg sm:text-xl text-brand-muted leading-relaxed max-w-2xl">
-        Hi, I'm Fabian Godoy. I'm a Software Engineering student bridging the gap between scalable full-stack development, user-centered design, and technical project management.
+        Hi, I&apos;m Fabian Godoy. I&apos;m a Software Engineering student bridging the gap between scalable full-stack development, user-centered design, and technical project management.
       </p>
 
       {/* Botones de acción usando tu componente personalizado */}
